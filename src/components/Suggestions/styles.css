@@ -1,0 +1,10 @@
+.sugestoes {
+    width: 50vh;
+}
+
+@media(min-width: 880px) {
+    .sugestoes {
+        margin-bottom: 50px;
+        width: 80vh;
+    }
+}
