@@ -1,0 +1,17 @@
+.categories-container{
+    display: flex;
+    gap: 2em;
+    padding: 0 40px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.dropdown {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.btn-add{
+    border-style: none;
+}
