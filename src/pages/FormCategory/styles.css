@@ -1,0 +1,33 @@
+/* body {
+    background-color: #e6e6e6;
+} */
+
+.login-container{
+    width: 100%;
+    max-width: 1120px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #be1e08;
+    font-weight: bold;
+}
+
+.btn {
+    margin-left: 40%;
+    background-color: #be1e08;
+    color: #fff;
+}
