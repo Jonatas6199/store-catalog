@@ -1,29 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Info from '../../components/Info';
+
+import Categories from '../../components/Categories';
+import Products from '../../components/Products';
+import Suggestions from '../../components/Suggestions';
+import Contact from '../../components/Contact';
 
 import './styles.css';
-import logo from '../../assets/logo.svg';
+// import logo from '../../assets/logo.svg';
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <Info code='src/App.js'></Info>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link className='page-link' to='/login'>Ir para Login</Link>
+    <>
+      <header>
+        <div className="header-container">
+          <h1>NakaDocinhos</h1>
+          <Link className='btn' to='/login'>Entrar</Link>
+        </div>
       </header>
-    </div>
+      <div className='line'></div>
+      <div className='main'>
+        <Categories isAdmin='N'></Categories>
+        <Products isAdmin='N'></Products>
+      </div>
+      <div className='footer row'>
+        <Suggestions></Suggestions>
+        <Contact></Contact>
+      </div>
+    </>
   );
 }
 

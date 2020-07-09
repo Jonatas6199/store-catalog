@@ -1,6 +1,6 @@
-body {
+/* body {
     background-color: #e6e6e6;
-}
+} */
 
 .login-container{
     width: 100%;
@@ -13,7 +13,6 @@ body {
 }
 
 .login {
-    /* background-color: lightgray; */
     background-color: #fff;
     border-radius: 5px;
     width: 100%;

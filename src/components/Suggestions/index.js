@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import api from '../../services/api';
+// import api from '../../services/api';
 import './styles.css';
 
 export default function Suggestions(){
@@ -18,7 +18,7 @@ export default function Suggestions(){
     }
 
     return(
-        <div className='sugestoes'>
+        <div className='sugestoes col-md-4'>
           <h3>Sugestões</h3>
           <p>Envie sua sugestão para nós!</p>
           <form onSubmit={handleSubmitSuggestion}>

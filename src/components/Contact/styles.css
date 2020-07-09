@@ -1,0 +1,9 @@
+.contact-items{
+    display: flex;
+    /* font-size: 18px; */
+    text-decoration: none;
+}
+
+.contact-items svg {
+    margin-right: 8px;
+}

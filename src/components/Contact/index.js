@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { FaWhatsapp, FaYoutube, FaEnvelope } from 'react-icons/fa';
+import { FaWhatsapp, FaYoutube, FaEnvelope, FaFacebook, FaInstagram } from 'react-icons/fa';
 
-import api from '../../services/api';
+// import api from '../../services/api';
 import './styles.css';
 
-export default function Info(props) {
+export default function Contact() {
   const [contact, setContact] = useState({});
 
   useEffect(() => {
@@ -19,24 +19,36 @@ export default function Info(props) {
   }, []);
 
   return (
-    <div className='contato'>
+    <div className='contato col-md-auto'>
       <h3>Contato</h3>
       {contact.whatsapp !== undefined ? (
-        <div>
+        <div className='contact-items'>
           <FaWhatsapp size={16} color='#c8c9c7'></FaWhatsapp>
           {contact.whatsapp}
         </div>
       ) : null}
       {contact.youtube !== undefined ? (
-        <div>
+        <div className='contact-items'>
           <FaYoutube size={16} color='#c8c9c7'></FaYoutube>
           {contact.youtube}
         </div>
       ) : null}
       {contact.email !== undefined ? (
-        <div>
+        <div className='contact-items'>
           <FaEnvelope size={16} color='#c8c9c7'></FaEnvelope>
           {contact.email}
+        </div>
+      ) : null}
+      {contact.facebook !== undefined ? (
+        <div className='contact-items'>
+          <FaFacebook size={16} color='#c8c9c7'></FaFacebook>
+          {contact.facebook}
+        </div>
+      ) : null}
+      {contact.instagram !== undefined ? (
+        <div className='contact-items'>
+          <FaInstagram size={16} color='#c8c9c7'></FaInstagram>
+          {contact.instagram}
         </div>
       ) : null}
     </div>

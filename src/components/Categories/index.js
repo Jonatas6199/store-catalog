@@ -1,31 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import { FaPlus } from 'react-icons/fa';
+import { FaPlus, FaPencilAlt } from 'react-icons/fa';
+import { FiTrash2 } from 'react-icons/fi';
+import { useHistory } from 'react-router-dom';
 
 // import api from '../../services/api';
 import './styles.css';
 
 export default function Categories(props){
     const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState({});
+    const history = useHistory();
 
     useEffect(() => {
         // const response = await api
         const response = ['doce', 'salgado', 'azedo'];
-        // console.log(props.isAdmin);
         setCategories(response);
     }, []);
 
+    function handleAddCategory(){
+        localStorage.setItem('idCategory', '');
+        localStorage.setItem('category', '');
+        history.push('/category');
+    }
+
+    function handleUpdateCategory(){
+        localStorage.setItem('idCategory', selectedCategory.id);
+        localStorage.setItem('category', selectedCategory.category);
+        history.push('/category');
+    }
+
+    async function handleDeleteCategory(){
+        try {
+            // await 
+            if(!selectedCategory.id){
+                return;
+            }
+            console.log('deleted ' + selectedCategory.id);
+        } catch (error) {
+            alert('Erro ao deletar categoria');
+        }
+    }
+
+    async function filter(e){
+        try {
+            setSelectedCategory({
+                id: e.target.value,
+                category: e.target.options[e.target.selectedIndex].text
+            });            
+        } catch (error) {
+            
+        }
+    }
+
     return (
         <div className='categories-container'>
-            <select className='dropdown'>
-                <option key='0' value='todos'>Todos</option>
+            <select className='dropdown' id='dropdown' onChange={filter}>
+                <option key='-1' value='-1'>Todos</option>
                 {categories.map((category, i) => (
-                    <option key={i} value={category}>{category}</option>
+                    <option key={i} value={i}>{category}</option>
                 ))}
             </select>
             {props.isAdmin === 'Y' ? (
-                <button className='btn-add'>
-                    <FaPlus size={16} color='#000'></FaPlus>
-                </button>
+                <div className='btn-container'>
+                    <button className='btn-add' onClick={handleAddCategory}>
+                        <FaPlus size={16} color='#000'></FaPlus>
+                    </button>
+                    <button className='btn-add' onClick={handleUpdateCategory}>
+                        <FaPencilAlt size={16} color='#000'></FaPencilAlt>
+                    </button>
+                    <button className='btn-add' onClick={handleDeleteCategory}>
+                        <FiTrash2 size={16} color='#000'></FiTrash2>
+                    </button>
+                </div>
             ) : null}
         </div>
     )
