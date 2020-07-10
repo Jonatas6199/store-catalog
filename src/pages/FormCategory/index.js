@@ -7,34 +7,41 @@ import './styles.css';
 export default function FormCategory(){
     const history = useHistory();
 
-    const [category, setCategory] = useState({});
-    const [id, setId] = useState(0);
+    const [categoryName, setCategoryName] = useState(localStorage.getItem('categoryName'));
+    const categoryId = localStorage.getItem('categoryId');
 
     useEffect(() => {
-        setCategory(localStorage.getItem('category'));
-        setId(localStorage.getItem('idCategory'));
-    }, []);
+        // setCategory(localStorage.getItem('category'));
+        // setId(localStorage.getItem('idCategory'));
+
+        document.getElementById('input-category').value = categoryName;
+    }, [categoryName]);
 
     async function handleSubmit(e){
         e.preventDefault();
 
         try {
-            if(id === 0){
+            if(!categoryId){
                 console.log('Cria')
             }
             else{
                 console.log('atualiza');
             }
 
-            // history.push('/admin');
+            console.log({
+                categoryId,
+                categoryName
+            });
+
+            history.push('/admin');
         } catch (error) {
-            alert('Tente novamente');
+            alert('Ocorreu um erro. Tente novamente');
         }
     }
 
     return(
-        <div className='login-container'>
-            <div className='login'>
+        <div className='category-container'>
+            <div className='category'>
                 <h1>Categoria</h1>
                 <br></br>
                 <form onSubmit={handleSubmit}>
@@ -43,8 +50,8 @@ export default function FormCategory(){
                         <input 
                             className="form-control" 
                             id="input-category"
-                            value={category}
-                            onChange={e => setCategory(e.target.value)}
+                            value={categoryName}
+                            onChange={e => setCategoryName(e.target.value)}
                             required></input>
                     </div>
                     <button type="submit" className="btn">Salvar</button>

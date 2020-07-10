@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './styles.css';
-import api from '../../services/api';
+// import api from '../../services/api';
 
 export default function Login(){
     const history = useHistory();

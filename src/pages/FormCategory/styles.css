@@ -1,8 +1,4 @@
-/* body {
-    background-color: #e6e6e6;
-} */
-
-.login-container{
+.category-container{
     width: 100%;
     max-width: 1120px;
     height: 100vh;
@@ -12,8 +8,8 @@
     align-items: center;
 }
 
-.login {
-    background-color: #fff;
+.category {
+    border: 2px solid #c8c9c7;
     border-radius: 5px;
     width: 100%;
     max-width: 350px;

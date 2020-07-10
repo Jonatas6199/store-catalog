@@ -18,21 +18,25 @@ export default function Categories(props){
     }, []);
 
     function handleAddCategory(){
-        localStorage.setItem('idCategory', '');
-        localStorage.setItem('category', '');
+        localStorage.setItem('categoryId', '');
+        localStorage.setItem('categoryName', '');
         history.push('/category');
     }
 
     function handleUpdateCategory(){
-        localStorage.setItem('idCategory', selectedCategory.id);
-        localStorage.setItem('category', selectedCategory.category);
+        if(!selectedCategory.id || selectedCategory.id === -1){
+            return;
+        }
+
+        localStorage.setItem('categoryId', selectedCategory.id);
+        localStorage.setItem('categoryName', selectedCategory.category);
         history.push('/category');
     }
 
     async function handleDeleteCategory(){
         try {
             // await 
-            if(!selectedCategory.id){
+            if(!selectedCategory.id || selectedCategory.id === -1){
                 return;
             }
             console.log('deleted ' + selectedCategory.id);
