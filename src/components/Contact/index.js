@@ -20,34 +20,34 @@ export default function Contact() {
 
   return (
     <div className='contato col-md-auto'>
-      <h3>Contato</h3>
+      <h3><strong>Contato</strong></h3>
       {contact.whatsapp !== undefined ? (
         <div className='contact-items'>
-          <FaWhatsapp size={16} color='#c8c9c7'></FaWhatsapp>
+          <FaWhatsapp size={18} color='#c8c9c7'></FaWhatsapp>
           {contact.whatsapp}
         </div>
       ) : null}
       {contact.youtube !== undefined ? (
         <div className='contact-items'>
-          <FaYoutube size={16} color='#c8c9c7'></FaYoutube>
+          <FaYoutube size={18} color='#c8c9c7'></FaYoutube>
           {contact.youtube}
         </div>
       ) : null}
       {contact.email !== undefined ? (
         <div className='contact-items'>
-          <FaEnvelope size={16} color='#c8c9c7'></FaEnvelope>
+          <FaEnvelope size={18} color='#c8c9c7'></FaEnvelope>
           {contact.email}
         </div>
       ) : null}
       {contact.facebook !== undefined ? (
         <div className='contact-items'>
-          <FaFacebook size={16} color='#c8c9c7'></FaFacebook>
+          <FaFacebook size={18} color='#c8c9c7'></FaFacebook>
           {contact.facebook}
         </div>
       ) : null}
       {contact.instagram !== undefined ? (
         <div className='contact-items'>
-          <FaInstagram size={16} color='#c8c9c7'></FaInstagram>
+          <FaInstagram size={18} color='#c8c9c7'></FaInstagram>
           {contact.instagram}
         </div>
       ) : null}

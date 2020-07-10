@@ -1,9 +1,16 @@
 .contact-items{
     display: flex;
-    /* font-size: 18px; */
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 18px;
     text-decoration: none;
+    color: #c8c9c7;
 }
 
 .contact-items svg {
     margin-right: 8px;
+}
+
+h3{
+    color: lightgray;
 }
