@@ -19,7 +19,7 @@ export default function Suggestions(){
 
     return(
         <div className='sugestoes col-md-4'>
-          <h3>Sugestões</h3>
+          <h3><strong>Sugestões</strong></h3>
           <p>Envie sua sugestão para nós!</p>
           <form onSubmit={handleSubmitSuggestion}>
             <div className="form-group">

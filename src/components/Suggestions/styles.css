@@ -1,10 +1,11 @@
-/* .sugestoes {
-    width: 50vh;
+.sugestoes h3{
+    color: lightgray;
 }
 
-@media(min-width: 880px) {
-    .sugestoes {
-        margin-bottom: 50px;
-        width: 80vh;
-    }
-} */
+.sugestoes p, .sugestoes label{
+    color: #c8c9c7;
+}
+
+.sugestoes button{
+    width: 100px;
+}
