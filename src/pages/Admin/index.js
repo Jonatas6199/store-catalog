@@ -19,11 +19,10 @@ export default function Admin(){
         <>
             <header>
                 <h1>NakaDocinhos</h1>
-                <button className='btn' onClick={handleLogout}>Sair</button>
             </header>
-            <div className='line'></div>
+            <button className='btn btn-login' onClick={handleLogout}>Sair</button>
+            <hr></hr>
             <div className='main'>
-                {/* <div className='filter-catalog'></div> */}
                 <Categories isAdmin='Y'></Categories>
                 <Products isAdmin='Y'></Products>
             </div>

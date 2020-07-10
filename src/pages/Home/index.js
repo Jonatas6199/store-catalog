@@ -7,18 +7,15 @@ import Suggestions from '../../components/Suggestions';
 import Contact from '../../components/Contact';
 
 import './styles.css';
-// import logo from '../../assets/logo.svg';
 
 function Home() {
   return (
     <>
       <header>
-        <div className="header-container">
-          <h1>NakaDocinhos</h1>
-          <Link className='btn' to='/login'>Entrar</Link>
-        </div>
+        <h1>NakaDocinhos</h1>
       </header>
-      <div className='line'></div>
+      <Link className='btn btn-login' to='/login'>Entrar</Link>
+      <hr></hr>
       <div className='main'>
         <Categories isAdmin='N'></Categories>
         <Products isAdmin='N'></Products>
