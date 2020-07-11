@@ -14,16 +14,10 @@ export default function FormProduct(){
     // const [categoryId, setCategoryId] = useState(localStorage.getItem('categoryId'));
 
     useEffect(() => {
-        // setProductId(localStorage.getItem('productId'));
-        // setProductName(localStorage.getItem('productName'));
-        // setProductDescription(localStorage.getItem('productDescription'));
-        // setProductPrice(localStorage.getItem('productPrice'));
-        // setCategoryId(localStorage.getItem('categoryId'));
-
         document.getElementById('input-name').value = productName;
         document.getElementById('input-description').value = productDescription;
         document.getElementById('input-price').value = productPrice;
-    }, [productName, productDescription, productPrice]);
+    });
 
     async function handleSubmit(e){
         e.preventDefault();

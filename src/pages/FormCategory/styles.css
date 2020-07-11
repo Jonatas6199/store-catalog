@@ -15,15 +15,3 @@
     max-width: 350px;
     padding: 15px;
 }
-
-h1 {
-    text-align: center;
-    color: #be1e08;
-    font-weight: bold;
-}
-
-.btn {
-    margin-left: 40%;
-    background-color: #be1e08;
-    color: #fff;
-}

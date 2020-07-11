@@ -22,7 +22,7 @@ function Home() {
       </div>
       <div className='footer row'>
         <Suggestions></Suggestions>
-        <Contact></Contact>
+        <Contact  isAdmin='N'></Contact>
       </div>
     </>
   );

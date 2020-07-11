@@ -43,7 +43,7 @@ export default function Products(props){
         <div className='products-container container'>
             <div className="products row">
                 {products.map(product => (
-                    <div className="card col-lg-3 d-flex align-items-stretch" key={product.productId}>
+                    <div className="card col-lg-3 align-items-stretch" key={product.productId}>
                         <img className="card-img-top" src="..." alt="A"></img>
                         <div className="card-body">
                             <h5 className="card-title">{product.productName}</h5>
@@ -52,11 +52,11 @@ export default function Products(props){
                         </div>
                         {props.isAdmin === 'Y' ? (
                             <div className='btn-group'>
-                                <button className='btn-add'onClick={() => handleUpdateProduct(product)} >
-                                    <FaPencilAlt size={18} color='#000'></FaPencilAlt>
+                                <button className='btn-action'onClick={() => handleUpdateProduct(product)} >
+                                    <FaPencilAlt size={20} color='#000'></FaPencilAlt>
                                 </button>
-                                <button className='btn-add' onClick={() => handleDeleteCategory(product.productId)}>
-                                    <FiTrash2 size={18} color='#000'></FiTrash2>
+                                <button className='btn-action' onClick={() => handleDeleteCategory(product.productId)}>
+                                    <FiTrash2 size={20} color='#000'></FiTrash2>
                                 </button>
                             </div>
                         ) : null}

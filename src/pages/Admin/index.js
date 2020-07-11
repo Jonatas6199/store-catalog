@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 import Categories from '../../components/Categories';
 import Products from '../../components/Products';
-import Suggestions from '../../components/Suggestions';
 import Contact from '../../components/Contact';
 
 import './styles.css';
@@ -15,6 +14,11 @@ export default function Admin(){
         localStorage.clear();
         history.push('/');
     }
+
+    function handleCreateUser(){
+        history.push('/user');
+    }
+
     return(
         <>
             <header>
@@ -25,10 +29,10 @@ export default function Admin(){
             <div className='main'>
                 <Categories isAdmin='Y'></Categories>
                 <Products isAdmin='Y'></Products>
+                <button className='btn btn-user' onClick={handleCreateUser}>Adicionar novo usuário</button>
             </div>
             <div className='footer row'>
-                <Suggestions></Suggestions>
-                <Contact></Contact>
+                <Contact isAdmin='Y'></Contact>
             </div>
         </>
     );

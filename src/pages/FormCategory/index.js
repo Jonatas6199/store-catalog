@@ -7,15 +7,12 @@ import './styles.css';
 export default function FormCategory(){
     const history = useHistory();
 
-    const [categoryName, setCategoryName] = useState(localStorage.getItem('categoryName'));
     const categoryId = localStorage.getItem('categoryId');
+    const [categoryName, setCategoryName] = useState(localStorage.getItem('categoryName'));
 
     useEffect(() => {
-        // setCategory(localStorage.getItem('category'));
-        // setId(localStorage.getItem('idCategory'));
-
         document.getElementById('input-category').value = categoryName;
-    }, [categoryName]);
+    });
 
     async function handleSubmit(e){
         e.preventDefault();

@@ -8,8 +8,8 @@ import './styles.css';
 export default function Login(){
     const history = useHistory();
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [userEmail, setUserEmail] = useState('');
+    const [userPassword, setUserPassword] = useState('');
 
     async function handleLogin(e){
         e.preventDefault();
@@ -18,7 +18,7 @@ export default function Login(){
             // const response = await api.post('');
             // localStorage.setItem('email')
             // if(isAdmin){}
-            console.log({email, password});
+            console.log({userEmail, userPassword});
             history.push('/admin');
         } catch (error) {
             alert('Falha no login. Tente novamente');
@@ -38,8 +38,8 @@ export default function Login(){
                             className="form-control" 
                             id="input-email"
                             aria-describedby="emailHelp"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                            value={userEmail}
+                            onChange={e => setUserEmail(e.target.value)}
                             required></input>
                     </div>
                     <div className="form-group">
@@ -48,8 +48,8 @@ export default function Login(){
                             type="password" 
                             className="form-control" 
                             id="input-password" 
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
+                            value={userPassword}
+                            onChange={e => setUserPassword(e.target.value)}
                             required></input>
                     </div>
                     <button type="submit" className="btn">Entrar</button>
