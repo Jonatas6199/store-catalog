@@ -43,7 +43,7 @@ export default function Products(props){
         <div className='products-container container'>
             <div className="products row">
                 {products.map(product => (
-                    <div className="card col-lg-3 align-items-stretch" key={product.productId}>
+                    <div className="card col-lg-3" key={product.productId}>
                         <img className="card-img-top" src="..." alt="A"></img>
                         <div className="card-body">
                             <h5 className="card-title">{product.productName}</h5>

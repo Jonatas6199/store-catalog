@@ -21,15 +21,14 @@ header {
 
 .footer {
     justify-content: flex-start;
-    gap: 2em;
     background-color: black;
     padding: 40px 40px;
     width: 100vw;
+    bottom: 0;
 }
 
 @media(min-width: 880px) {
     .footer {
-        gap: 5em;
         justify-content: center;
         padding: 40px 20px;
     }

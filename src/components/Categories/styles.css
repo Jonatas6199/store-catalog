@@ -1,6 +1,5 @@
 .categories-container{
     display: flex;
-    gap: 1em;
     padding: 0 40px;
     width: 90%;
     justify-content: center;
@@ -16,6 +15,7 @@
     border-radius: 5px;
     width: 100%;
     max-width: 280px;
+    margin-right: 1em;
 }
 
 .btn-action{
