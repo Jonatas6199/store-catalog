@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+h1 {
+  text-align: start;
+  margin-left: 20px;
+  padding-top: 6px;
+  font-size: 30px !important;
+  color: #be1e08;
+  font-weight: bold !important;
+}
+
+@media(min-width: 880px){
+  h1 {
+    text-align: center;
+    font-size: 2.5rem !important;
+    padding-top: 0;
+  }
+}
+
+.btn {
+  margin-left: 40%;
+  background-color: #be1e08 !important;
+  color: #fff !important;
+}
+
 hr {
   width: 100%;
   color: #c8c9c7;
