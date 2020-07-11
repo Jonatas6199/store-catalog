@@ -66,14 +66,14 @@ export default function Categories(props){
             </select>
             {props.isAdmin === 'Y' ? (
                 <div className='btn-container'>
-                    <button className='btn-add' onClick={handleAddCategory}>
-                        <FaPlus size={16} color='#000'></FaPlus>
+                    <button className='btn-action' onClick={handleAddCategory}>
+                        <FaPlus size={22} color='#000'></FaPlus>
                     </button>
-                    <button className='btn-add' onClick={handleUpdateCategory}>
-                        <FaPencilAlt size={16} color='#000'></FaPencilAlt>
+                    <button className='btn-action' onClick={handleUpdateCategory}>
+                        <FaPencilAlt size={22} color='#000'></FaPencilAlt>
                     </button>
-                    <button className='btn-add' onClick={handleDeleteCategory}>
-                        <FiTrash2 size={16} color='#000'></FiTrash2>
+                    <button className='btn-action' onClick={handleDeleteCategory}>
+                        <FiTrash2 size={22} color='#000'></FiTrash2>
                     </button>
                 </div>
             ) : null}

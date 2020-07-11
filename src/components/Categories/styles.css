@@ -1,9 +1,15 @@
 .categories-container{
     display: flex;
-    gap: 2em;
+    gap: 1em;
     padding: 0 40px;
-    width: 100%;
-    justify-content: space-around;
+    width: 90%;
+    justify-content: center;
+}
+
+.btn-container{
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
 }
 
 .dropdown {
@@ -12,6 +18,7 @@
     max-width: 280px;
 }
 
-.btn-add{
+.btn-action{
+    background-color: transparent;
     border-style: none;
 }
