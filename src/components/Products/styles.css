@@ -30,7 +30,6 @@
 
 .card{
     max-width: 285px;
-    max-height: 200px;
     margin: 0 2em 2em 2em;
 }
 
@@ -38,4 +37,33 @@
     .card{
         margin-left: 0;
     }
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.categories-container{
+    display: flex;
+    padding: 0 40px;
+    width: 90%;
+    justify-content: center;
+}
+
+.btn-container{
+    display: flex;
+    width: 90px;
+    justify-content: space-between;
+}
+
+.dropdown {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 280px;
+    margin-right: 1em;
+}
+
+.btn-action{
+    background-color: transparent;
+    border-style: none;
 }

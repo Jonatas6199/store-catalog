@@ -28,9 +28,7 @@ export default function FormContact(){
         e.preventDefault();
 
         try {
-            // console.log({
-            //     productId,
-            // });
+            console.log(contactId);
 
             history.push('/admin');
         } catch (error) {

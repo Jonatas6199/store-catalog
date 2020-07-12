@@ -11,12 +11,15 @@ export default function FormProduct(){
     const [productName, setProductName] = useState(localStorage.getItem('productName'));
     const [productDescription, setProductDescription] = useState(localStorage.getItem('productDescription'));
     const [productPrice, setProductPrice] = useState(localStorage.getItem('productPrice'));
-    // const [categoryId, setCategoryId] = useState(localStorage.getItem('categoryId'));
+    const [productPhoto, setProductPhoto] = useState('');
+    const [categoryId, setCategoryId] = useState(localStorage.getItem('categoryId'));
+    const categories = localStorage.getItem('categories').split(',');
 
     useEffect(() => {
         document.getElementById('input-name').value = productName;
         document.getElementById('input-description').value = productDescription;
         document.getElementById('input-price').value = productPrice;
+        document.getElementById('dropdown').value = categoryId;
     });
 
     async function handleSubmit(e){
@@ -35,7 +38,7 @@ export default function FormProduct(){
                 productName,
                 productDescription,
                 productPrice,
-                // categoryId
+                categoryId
             });
 
             history.push('/admin');
@@ -79,6 +82,25 @@ export default function FormProduct(){
                             value={productPrice}
                             onChange={e => setProductPrice(e.target.value)}
                             required></input>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="input-photo">Foto</label>
+                        <input 
+                            type='image'
+                            className="form-control" 
+                            id="input-photo"
+                            aria-label='photo'
+                            value={productPhoto}
+                            onChange={e => setProductPhoto(e.target.value)}
+                            required></input>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="input-category">Categoria</label>
+                        <select className='dropdown' id='dropdown' onChange={e => setCategoryId(e.target.value)}>
+                        {categories.map((category, i) => (
+                            <option key={i} value={i}>{category}</option>
+                        ))}
+                    </select>
                     </div>
                     <button type="submit" className="btn">Salvar</button>
                 </form>

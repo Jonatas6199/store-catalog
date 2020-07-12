@@ -1,7 +1,6 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
-import Categories from '../../components/Categories';
 import Products from '../../components/Products';
 import Contact from '../../components/Contact';
 
@@ -15,10 +14,6 @@ export default function Admin(){
         history.push('/');
     }
 
-    function handleCreateUser(){
-        history.push('/user');
-    }
-
     return(
         <>
             <header>
@@ -27,9 +22,10 @@ export default function Admin(){
             <button className='btn btn-login' onClick={handleLogout}>Sair</button>
             <hr></hr>
             <div className='main'>
-                <Categories isAdmin='Y'></Categories>
                 <Products isAdmin='Y'></Products>
-                <button className='btn btn-user' onClick={handleCreateUser}>Adicionar novo usuário</button>
+                <Link className='btn btn-user' to='/user'>
+                    Adicionar novo usuário
+                </Link>
             </div>
             <div className='footer row'>
                 <Contact isAdmin='Y'></Contact>
